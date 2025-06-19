@@ -1,0 +1,13 @@
+{
+  "name": "img-302",
+  "version": "1.0.0",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "Sn0wo2",
+  "license": "ISC",
+  "description": "img-302",
+  "devDependencies": {
+    "@vercel/node": "^5.2.2"
+  }
+}
