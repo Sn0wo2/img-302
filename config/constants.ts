@@ -19,6 +19,4 @@ export const IMAGES = [
     'https://madosoft.net/hamidashi/wp/wp-content/themes/hamidashi/img/character/hiyori_pic.png',
     'https://madosoft.net/hamidashi/wp/wp-content/themes/hamidashi/img/character/kano_pic.png',
     'https://madosoft.net/hamidashi/wp/wp-content/themes/hamidashi/img/character/ameri_pic.png',
-
-    '/assets/boom.jpg',
 ] as const;
