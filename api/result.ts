@@ -1,7 +1,7 @@
-import type {VercelRequest, VercelResponse} from '@vercel/node';
 import {getRandomImage} from "../img";
+import {VercelRequest, VercelResponse} from '@vercel/node';
 
-export default (request: VercelRequest, response: VercelResponse) => {
+module.exports = async (request: VercelRequest, response: VercelResponse) => {
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
     response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -11,4 +11,4 @@ export default (request: VercelRequest, response: VercelResponse) => {
     }
 
     response.redirect(302, getRandomImage());
-};
+}
