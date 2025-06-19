@@ -1,10 +1,5 @@
-const URLS = [
-    'https://bocchi.rocks/tv/assets/img/page/character/hitori/main.png',
-    'https://bocchi.rocks/tv/assets/img/page/character/ikuyo/main.png',
-    'https://bocchi.rocks/tv/assets/img/page/character/nijika/main.png',
-    'https://bocchi.rocks/tv/assets/img/page/character/ryo/main.png'
-] as const;
+import {IMAGES} from "../config/constants";
 
-export function getRandomURL() {
-    return URLS[Math.floor(Math.random() * URLS.length)];
+export function getRandomImage() {
+    return IMAGES[Math.floor(Math.random() * IMAGES.length)];
 }

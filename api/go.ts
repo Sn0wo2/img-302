@@ -1,5 +1,5 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
-import {getRandomURL} from "../img";
+import type {VercelRequest, VercelResponse} from '@vercel/node';
+import {getRandomImage} from "../img";
 
 export default (request: VercelRequest, response: VercelResponse) => {
     response.setHeader('Access-Control-Allow-Origin', '*');
@@ -10,5 +10,5 @@ export default (request: VercelRequest, response: VercelResponse) => {
         return response.status(200).end();
     }
 
-    response.redirect(302, getRandomURL());
+    response.redirect(302, getRandomImage());
 };
