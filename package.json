@@ -7,6 +7,10 @@
   "license": "ISC",
   "description": "img-302",
   "devDependencies": {
+    "@types/mime-types": "^3.0.1",
     "@vercel/node": "^5.2.2"
+  },
+  "dependencies": {
+    "mime-types": "^3.0.1"
   }
 }
