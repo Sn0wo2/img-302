@@ -2,15 +2,9 @@ import {readFile} from 'fs/promises';
 import {extname} from 'path';
 import {VercelRequest, VercelResponse} from '@vercel/node';
 import {getContentType, getValidImageUrl} from "../img";
+import {cors} from '../middleware/cors';
 
-module.exports = async (request: VercelRequest, response: VercelResponse) => {
-    response.setHeader('Access-Control-Allow-Origin', '*');
-    response.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-    response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-    if (request.method === 'OPTIONS') {
-        return response.status(200).end();
-    }
+const handler = async (request: VercelRequest, response: VercelResponse) => {
 
     try {
         const {url, isLocal} = await getValidImageUrl();
@@ -27,3 +21,5 @@ module.exports = async (request: VercelRequest, response: VercelResponse) => {
         response.status(404).json({msg: 'Local assets not found'});
     }
 };
+
+module.exports = cors(handler);
