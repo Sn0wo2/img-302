@@ -1,4 +1,4 @@
-import { VercelRequest, VercelResponse } from '@vercel/node';
+import {VercelRequest, VercelResponse} from '@vercel/node';
 
 export const cors = (handler: Function) => async (request: VercelRequest, response: VercelResponse) => {
     response.setHeader('Access-Control-Allow-Origin', '*');
