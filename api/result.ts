@@ -3,6 +3,7 @@ import {extname} from 'path';
 import {VercelRequest, VercelResponse} from '@vercel/node';
 import {getContentType, getValidImageUrl} from "../img";
 import {cors} from '../middleware/cors';
+import {noCache} from "../middleware/no-cache";
 
 const handler = async (request: VercelRequest, response: VercelResponse) => {
 
@@ -22,4 +23,4 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
     }
 };
 
-module.exports = cors(handler);
+module.exports = cors(noCache(handler));
