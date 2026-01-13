@@ -8,7 +8,7 @@
   "description": "img-302",
   "devDependencies": {
     "@types/mime-types": "^3.0.1",
-    "@vercel/node": "^5.3.4"
+    "@vercel/node": "^5.5.17"
   },
   "dependencies": {
     "mime-types": "^3.0.1"
